@@ -62,7 +62,8 @@ states); this skill = *why* a design works, named laws to reason and argue with.
 - **Occam's Razor** — remove until it breaks; fewest elements/assumptions that still work.
 - **Pareto Principle (80/20)** — ~80% of use comes from ~20% of features; optimize those first.
 - **Parkinson's Law** — work expands to fill time; constrain steps/inputs, autofill, sane defaults.
-- **Cognitive Bias** — account for systematic judgment errors (anchoring, framing) in how you present choices/defaults.
+- **Cognitive Bias** — account for systematic judgment errors (anchoring, framing) in how you present choices/defaults. Use this to protect users, never to steer them: nothing picked for them, declines neutral.
+- **Priming** ([NN/g](https://www.nngroup.com/articles/priming/)) — what a person has just seen shapes what they expect and do next. A scope trail primes reading figures as that scope's; a red tile primes alarm, so a zero is never red; a pre-filled value primes acceptance, so say it was pre-filled. In usability tests, never use the screen's own words in the task, or the test measures word matching.
 
 ## Laws of UI — visual craft (uilaws.com)
 - **Typography Hierarchy** — clear size/weight steps guide reading order; one type scale.
@@ -76,6 +77,30 @@ states); this skill = *why* a design works, named laws to reason and argue with.
 - (Shared with UX: **Fitts's**, **Hick's**, **Jakob's** — same definitions.)
 
 ---
+
+## Never a deceptive pattern
+NN/g ([Deceptive Patterns](https://www.nngroup.com/articles/deceptive-patterns/)) defines one as a design that gets people to act by "deceiving, misdirecting, shaming, or obstructing". Even without a commercial motive, the same shapes appear by accident. None is allowed:
+- **Obstruction** — the safe action is one click and the opposing one is buried.
+- **Visual or wording tricks** — a destructive button styled as the safe one, a double negative, buttons that swap places between dialogs.
+- **Nagging** — a dismissed notice that returns on every load.
+- **Emotional manipulation** — shaming copy on a decline ("Are you sure you want to leave the gate uncovered?").
+- **Sneaking or preselection** — a checkbox ticked for the person, a default filter applied without a visible chip, a pre-filled value not marked as such.
+- **Sludge** — extra steps or a dialog in front of a routine, safe action.
+
+Before shipping, ask NN/g's questions: could someone share or change more than they meant to, misread a choice from how it is shown, miss an option, feel rushed, or feel shamed for declining? Any yes is a defect.
+
+## When laws conflict
+Resolve in this order and say which one decided:
+1. **The brief and honesty** (what the product must not fake or hide).
+2. **The project's design system / style guide.** A law justifies a spec; it does not change one quietly.
+3. **The law that protects the task**: Hick, Fitts, Cognitive Load, Doherty.
+4. **The law that polishes it**: Aesthetic-Usability, Prägnanz, Von Restorff.
+
+Common tensions:
+- **Density vs. Cognitive Load** — dense is correct for a register of records; clutter is not. Cut columns that repeat a value.
+- **Jakob vs. the brief** — an icon-only convention loses to a glyph plus a word wherever there is room.
+- **Zeigarnik vs. Flow** — show unfinished work where the person already looks, but never interrupt to say it.
+- Apply every law for the real reader (e.g. someone who does the task dozens of times a day), not a first-time visitor. Record a decision that changes the style guide with its law, in one clause.
 
 ## Quick "do we need this?" rubric (redundancy / affordance calls)
 When asked whether an element (a second button, an extra menu, a duplicate CTA) is needed:

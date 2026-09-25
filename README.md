@@ -8,8 +8,12 @@ Organized by **skill / concept**, never by the project they came from.
 ```
 commands/<concept>/<command-name>.md    # slash commands, grouped by concept (e.g. git/, review/, ui/)
 skills/<skill-name>/SKILL.md            # skills, one folder each (plus any supporting files)
-rules/<concept>.md                      # standing rules/conventions, one file per concept (e.g. typescript.md, testing.md)
+rules/<group>/<concept>.md              # standing rules/conventions, grouped (ux/, ui-design/, content-and-feedback/, process/)
 ```
+
+Rules and commands cross-reference each other by filename as `.claude/rules/<file>.md` and `/<command>`.
+When installing into a project, copy them flat into that project's `.claude/rules/` and `.claude/commands/`.
+Rule concepts that overlap a skill (e.g. UX laws, motion) live in the skill and are referenced, not duplicated.
 
 ## Conventions
 
